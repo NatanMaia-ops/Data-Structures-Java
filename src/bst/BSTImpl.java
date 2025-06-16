@@ -363,4 +363,20 @@ public class BSTImpl implements BST_IF {
         return list;
     }
 
+	@Override
+	public boolean isEquals(Node treeA, Node treeB) {
+		if(treeA == null && treeB == null)
+			return true;//Se ambas as arvores estiverem vazias entao sao consideradas iguais
+
+
+		if((treeA == null || treeB == null))
+			return false;
+
+		if(treeA.getValue() != treeB.getValue())
+			return false;
+
+		
+		return isEquals(treeA.getLeft(), treeB.getLeft()) && isEquals(treeA.getRight(), treeB.getRight()); 
+	}
+
 }

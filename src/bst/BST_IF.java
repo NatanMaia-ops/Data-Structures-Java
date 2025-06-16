@@ -14,4 +14,5 @@ public interface BST_IF {
 	public Integer[] order();
 	public Integer[] postOrder();
 	public int size();
+	public boolean isEquals(Node treeA, Node treeB);
 }
